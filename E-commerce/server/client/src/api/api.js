@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const baseURL = 'https://poc-1-nu/api';
+const baseURL = '';
 
 export const getAllProducts = async () => {
   try {
-    const response = await axios.get(`${baseURL}/products`);
+    const response = await axios.get(`${baseURL}/api/products`);
     return response.data;
   } catch (error) {
     console.error('Error fetching all products:', error.message);
