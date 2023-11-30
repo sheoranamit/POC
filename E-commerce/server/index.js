@@ -9,7 +9,7 @@ const port = process.env.PORT || 5000;
 
 app.use(cors());
 dotenv.config();
-
+const __dirname = path.resolve();
 app.get('/api/products', async (req, res) => {
   try {
     const response = await axios.get('https://fakestoreapi.com/products');
