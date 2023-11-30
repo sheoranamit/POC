@@ -18,7 +18,6 @@ app.get('/api/products', async (req, res) => {
   }
 });
 
-module.exports = app;
 
 app.get('/api/products/:id', async (req, res) => {
   const productId = req.params.id;
@@ -35,3 +34,6 @@ app.get('/api/products/:id', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+
+module.exports = app;
