@@ -9,7 +9,9 @@ const port = process.env.PORT || 5000;
 
 app.use(cors());
 dotenv.config();
-const __dirname = path.resolve();
+
+const dirname = path.resolve();
+
 app.get('/api/products', async (req, res) => {
   try {
     const response = await axios.get('https://fakestoreapi.com/products');
@@ -36,10 +38,10 @@ app.get('/api/products/:id', async (req, res) => {
 
 if (process.env.NODE_ENV === "production") {
   // Serve any static files
-  app.use(express.static(path.join(__dirname, "client/build")));
+  app.use(express.static(path.join(dirname, "client/build")));
   // Handle React routing, return all requests to React app
   app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, "client/build", "index.html"));
+    res.sendFile(path.join(dirname, "client/build", "index.html"));
   });
 }
 
