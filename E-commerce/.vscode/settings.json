@@ -1,0 +1,10 @@
+{
+    "cmake.configureOnOpen": true,
+    "cSpell.words": [
+        "Fakestore",
+        "headlessui",
+        "heroicons",
+        "reduxjs",
+        "toastify"
+    ]
+}
